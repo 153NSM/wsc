@@ -1,57 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>장영실 미션</title>
+    <title>장영실 LAB | WORLD SCIENCE CONGRESS</title>
 
-<link rel="stylesheet" href="css/style.css?v=3">
-
+    <link rel="stylesheet" href="css/style.css?v=10">
 </head>
+
+
 <body>
 
-    <h1>WORLD SCIENCE CONGRESS</h1>
+    <!-- 전체 미션 카드 시작 -->
+    <main class="mission-card">
 
-    <h2>장영실 LAB</h2>
+        <h1>WORLD SCIENCE CONGRESS</h1>
 
-    <hr>
+        <h2>장영실 LAB</h2>
 
-    <h2>🌞 「그림자의 비밀」을 밝혀라</h2>
+        <hr>
 
-    <p>
-        앙부일구를 자세히 관찰하세요. 그림자의 방향과 위치가 달라지는 이유는 무엇일까요?
-    </p>
 
-    <hr>
+        <!-- 미션 제목 -->
+        <h3>🌞 「그림자의 비밀」을 밝혀라</h3>
 
-    <h3>Q. 그림자의 방향과 위치가 달라지는 이유는?</h3>
 
-    <div class="answer-list">
+        <!-- 미션 설명 -->
+        <p class="mission-guide">
+            앙부일구를 자세히 관찰하세요. 그림자의 방향과 위치가 달라지는 이유는 무엇일까요?
+        </p>
 
-    <button onclick="checkAnswer(1)">
-        ① 지구의 자전
-    </button>
 
-    <button onclick="checkAnswer(2)">
-        ② 물의 흐름
-    </button>
+        <hr>
 
-    <button onclick="checkAnswer(3)">
-        ③ 달의 크기의 변화
-    </button>
 
-    <button onclick="checkAnswer(4)">
-        ④ 바람
-    </button>
+        <!-- 문제 -->
+        <p class="question">
+            <strong>Q. 그림자의 방향과 위치가 달라지는 이유는?</strong>
+        </p>
 
-</div>
 
-<div id="result"></div>
-<script src="js/mission.js"></script>
+        <!-- 보기 -->
+        <div class="answer-list">
+
+            <button class="answer answer-1" onclick="checkAnswer(1)">
+                ① 지구의 자전
+            </button>
+
+            <button class="answer answer-2" onclick="checkAnswer(2)">
+                ② 물의 흐름
+            </button>
+
+            <button class="answer answer-3" onclick="checkAnswer(3)">
+                ③ 달의 크기의 변화
+            </button>
+
+            <button class="answer answer-4" onclick="checkAnswer(4)">
+                ④ 바람
+            </button>
+
+        </div>
+
+
+        <!-- 정답 결과 -->
+        <div id="result"></div>
+
+    </main>
+    <!-- 전체 미션 카드 끝 -->
+
+
+    <script src="js/mission.js"></script>
 
 </body>
 
