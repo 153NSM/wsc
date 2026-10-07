@@ -22,7 +22,7 @@ body {
             rgba(255, 255, 255, 0.18),
             rgba(255, 255, 255, 0.18)
         ),
-        url("../jang-bg.png");
+      url("../images/jang-bg.png");
 
     background-size: cover;
     background-position: center center;
