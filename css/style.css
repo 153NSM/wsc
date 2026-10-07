@@ -216,3 +216,61 @@ hr {
         line-height: 1.25;
     }
 }
+/* ===== 휴대폰 세로 공간 최소화 ===== */
+
+@media screen and (max-width: 600px) {
+
+    /* 화면 위아래 여백 */
+    body {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    /* WORLD SCIENCE CONGRESS */
+    h1 {
+        margin: 1px 0 3px 0;
+        line-height: 1.05;
+    }
+
+    /* 장영실 LAB */
+    h2 {
+        margin: 2px 0 3px 0;
+        line-height: 1.05;
+    }
+
+    /* 그림자의 비밀 */
+    h3 {
+        margin: 4px 0 2px 0;
+        line-height: 1.15;
+    }
+
+    /* 설명 및 문제 */
+    p {
+        margin: 2px 0;
+        line-height: 1.15;
+    }
+
+    /* 가로 구분선 */
+    hr {
+        margin: 4px 0;
+    }
+
+    /* 보기 전체 */
+    .answer-list {
+        gap: 3px;
+        margin-top: 3px;
+    }
+
+    /* 보기 ①~④ 박스 */
+    .answer-list button {
+        padding: 5px 12px;
+        line-height: 1.1;
+    }
+
+    /* 정답 결과 */
+    #result {
+        margin-top: 3px;
+        padding: 3px 2px;
+        line-height: 1.15;
+    }
+}
