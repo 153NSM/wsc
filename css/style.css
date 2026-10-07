@@ -1,6 +1,14 @@
+/* ==============================
+   전체 화면
+============================== */
+
 body {
     margin: 0;
-    padding: 20px;
+    padding: 8px 16px;
+
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 
     font-family: Arial, sans-serif;
 
@@ -8,175 +16,203 @@ body {
     color: #222;
 }
 
-body {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
+/* ==============================
+   WORLD SCIENCE CONGRESS
+============================== */
 
 h1 {
     text-align: center;
 
-    font-size: 20px;
+    font-size: 21px;
+    line-height: 1.2;
     letter-spacing: 2px;
 
     color: #345;
+
+    margin: 4px 0 8px 0;
 }
+
+
+/* ==============================
+   장영실 LAB
+============================== */
 
 h2 {
     text-align: center;
+
+    font-size: 20px;
+    line-height: 1.2;
+
+    margin: 5px 0 8px 0;
 }
+
+
+/* ==============================
+   그림자의 비밀을 밝혀라
+============================== */
 
 h3 {
-    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.3;
+
+    margin: 10px 0 6px 0;
 }
 
+
+/* ==============================
+   설명 글자
+============================== */
+
 p {
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.35;
+
+    margin: 5px 0;
 }
 
 p:first-of-type {
     color: #555;
 }
 
+
+/* ==============================
+   구분선
+============================== */
+
 hr {
     border: none;
     border-top: 1px solid #ddd;
-    margin: 25px 0;
+
+    margin: 10px 0;
 }
+
+
+/* ==============================
+   보기 전체 영역
+============================== */
+
 .answer-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
 
-    margin-top: 20px;
+    gap: 6px;
+
+    margin-top: 8px;
 }
 
+
+/* ==============================
+   보기 ① ~ ④ 박스
+============================== */
+
 .answer-list button {
-    padding: 18px;
+    width: 100%;
+
+    padding: 8px 14px;
 
     border: none;
-    border-radius: 12px;
+    border-radius: 9px;
 
     background-color: white;
 
     font-size: 17px;
+    line-height: 1.25;
+    font-weight: 600;
+
     text-align: left;
 
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 
     cursor: pointer;
 }
 
+
+/* 마우스를 올렸을 때 */
+
 .answer-list button:hover {
     background-color: #e8f5e9;
 }
-/* ===== 모바일 화면 글자 크기 개선 ===== */
-
-h1 {
-    font-size: 28px;
-    line-height: 1.3;
-}
-
-h2 {
-    font-size: 26px;
-    line-height: 1.4;
-}
-
-h3 {
-    font-size: 22px;
-    line-height: 1.5;
-}
-
-p {
-    font-size: 20px;
-    line-height: 1.7;
-}
-
-.answer-list button {
-    font-size: 20px;
-    line-height: 1.5;
-    padding: 20px;
-}
-
-#result {
-    margin-top: 25px;
-    font-size: 22px;
-    line-height: 1.6;
-    font-weight: bold;
-    text-align: center;
-}
-/* ===== 보기 버튼 글자 크게 ===== */
-
-.answer-list button {
-    font-size: 23px;
-    line-height: 1.5;
-    padding: 22px 20px;
-    font-weight: 600;
-}
 
 
-/* ===== 정답 결과 글자 크게 ===== */
-
-#result {
-    margin-top: 30px;
-    padding: 22px;
-
-    font-size: 24px;
-    line-height: 1.7;
-    font-weight: bold;
-    text-align: center;
-}
-/* ===== 모바일 MISSION CLEAR 결과 강조 ===== */
+/* ==============================
+   MISSION CLEAR
+============================== */
 
 #result {
     width: 100%;
     box-sizing: border-box;
 
-    margin-top: 30px;
-    padding: 25px 15px;
+    margin-top: 8px;
+    padding: 6px 4px;
 
-    font-size: 28px !important;
-    line-height: 1.8 !important;
-    font-weight: 700 !important;
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: bold;
+
     text-align: center;
 }
 
-/* 휴대폰 화면 */
+
+/* ==============================
+   휴대폰 화면
+============================== */
+
 @media screen and (max-width: 600px) {
 
-    #result {
-        font-size: 28px !important;
-        line-height: 1.8 !important;
-        font-weight: 700 !important;
-        text-align: center !important;
+    body {
+        padding: 6px 14px;
     }
-}
-/* ===== 휴대폰 보기 박스 높이 줄이기 ===== */
 
-@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+        margin-top: 3px;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        font-size: 19px;
+        margin-top: 4px;
+        margin-bottom: 6px;
+    }
+
+    h3 {
+        font-size: 17px;
+        margin-top: 8px;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.3;
+        margin: 4px 0;
+    }
+
+    hr {
+        margin: 8px 0;
+    }
 
     .answer-list {
-        gap: 8px;
-        margin-top: 12px;
+        gap: 5px;
+        margin-top: 6px;
     }
 
     .answer-list button {
-        font-size: 21px;
-        line-height: 1.3;
+        font-size: 16px;
 
-        padding: 12px 16px;
+        padding: 7px 12px;
 
-        min-height: 0;
-        border-radius: 10px;
+        line-height: 1.2;
+
+        border-radius: 8px;
     }
 
     #result {
-        margin-top: 15px;
-        padding: 12px 10px;
+        margin-top: 6px;
 
-        font-size: 25px !important;
-        line-height: 1.5 !important;
+        padding: 5px 3px;
+
+        font-size: 18px;
+        line-height: 1.25;
     }
 }
