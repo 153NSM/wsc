@@ -128,3 +128,28 @@ p {
     font-weight: bold;
     text-align: center;
 }
+/* ===== 모바일 MISSION CLEAR 결과 강조 ===== */
+
+#result {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-top: 30px;
+    padding: 25px 15px;
+
+    font-size: 28px !important;
+    line-height: 1.8 !important;
+    font-weight: 700 !important;
+    text-align: center;
+}
+
+/* 휴대폰 화면 */
+@media screen and (max-width: 600px) {
+
+    #result {
+        font-size: 28px !important;
+        line-height: 1.8 !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+    }
+}
