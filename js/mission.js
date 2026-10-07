@@ -3,7 +3,9 @@ function checkAnswer(answer) {
     if (answer === 1) {
 
         document.getElementById("result").innerHTML =
-            "🎉 MISSION CLEAR!<br><br>첫 번째 비밀코드: 1";
+            '🎉 MISSION CLEAR!' +
+            '<div class="code-title">첫 번째 비밀코드</div>' +
+            '<div class="code-badge">1</div>';
 
     } else {
 
