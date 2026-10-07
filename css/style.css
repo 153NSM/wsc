@@ -1,82 +1,134 @@
 /* ========================================
    WORLD SCIENCE CONGRESS
-   장영실 미션 페이지
+   장영실 LAB
 ======================================== */
 
 
-/* ===== 전체 화면 ===== */
+/* ===== 전체 화면 + 포스터 배경 ===== */
 
 body {
-    margin: 0 auto;
-    padding: 8px 16px 12px 16px;
+    margin: 0;
+    min-height: 100vh;
+    padding: 10px 14px;
 
-    max-width: 600px;
+    box-sizing: border-box;
 
     font-family: Arial, sans-serif;
+    color: #17243b;
 
-    background-color: #f2f5f8;
-    color: #222;
+    /* GitHub 루트에 올린 배경 이미지 */
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.18),
+            rgba(255, 255, 255, 0.18)
+        ),
+        url("../jang-bg.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+/* ========================================
+   전체 미션 반투명 카드
+======================================== */
+
+.mission-card {
+    width: 100%;
+    max-width: 600px;
+
+    box-sizing: border-box;
+
+    margin: 8px auto;
+    padding: 14px 16px 16px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 40, 80, 0.18);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 
 /* ===== WORLD SCIENCE CONGRESS ===== */
 
 h1 {
-    margin: 6px 0 6px 0;
+    margin: 2px 0 5px;
 
     text-align: center;
 
     font-size: 25px;
-    line-height: 1.2;
+    line-height: 1.15;
     letter-spacing: 2px;
 
-    color: #345;
+    color: #124a88;
 }
 
 
 /* ===== 장영실 LAB ===== */
 
 h2 {
-    margin: 5px 0 8px 0;
+    margin: 3px 0 8px;
 
     text-align: center;
 
     font-size: 23px;
     line-height: 1.2;
+
+    color: #073568;
 }
 
 
 /* ===== 미션 제목 ===== */
 
 h3 {
-    margin: 9px 0 6px 0;
+    margin: 9px 0 7px;
+
+    text-align: center;
 
     font-size: 21px;
     line-height: 1.3;
+
+    color: #152b4f;
 }
 
 
-/* ===== 설명 / 질문 글자 ===== */
+/* ===== 설명 ===== */
 
 p {
-    margin: 5px 0;
+    margin: 6px 0;
 
     font-size: 18px;
     line-height: 1.35;
 }
 
-p:first-of-type {
-    color: #555;
+
+/* 앙부일구 설명 */
+
+.mission-guide {
+    color: #35445b;
 }
 
 
-/* ===== 가로 구분선 ===== */
+/* 문제 */
+
+.question {
+    color: #10233f;
+}
+
+
+/* ===== 구분선 ===== */
 
 hr {
-    margin: 8px 0;
+    margin: 9px 0;
 
     border: none;
-    border-top: 1px solid #d6d6d6;
+    border-top: 1px solid rgba(35, 75, 110, 0.22);
 }
 
 
@@ -88,49 +140,88 @@ hr {
     display: flex;
     flex-direction: column;
 
-    gap: 6px;
+    gap: 7px;
 
     margin-top: 7px;
 }
 
 
-/* ===== 보기 버튼 ===== */
+/* 모든 보기 공통 */
 
 .answer-list button {
     width: 100%;
 
-    padding: 8px 13px;
+    padding: 9px 14px;
 
-    border: none;
-    border-radius: 10px;
+    box-sizing: border-box;
 
-    background-color: white;
+    border-radius: 11px;
 
     font-family: Arial, sans-serif;
-
     font-size: 19px;
     line-height: 1.2;
     font-weight: 600;
 
     text-align: left;
 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-
     cursor: pointer;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.09);
+
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease;
 }
 
 
-/* ===== 마우스를 올렸을 때 ===== */
+/* ===== ① 초록 ===== */
+
+.answer-1 {
+    background: rgba(222, 247, 222, 0.94);
+    border: 2px solid #79c67a;
+    color: #173f22;
+}
+
+
+/* ===== ② 파랑 ===== */
+
+.answer-2 {
+    background: rgba(220, 240, 255, 0.94);
+    border: 2px solid #72b8e8;
+    color: #163a59;
+}
+
+
+/* ===== ③ 노랑 ===== */
+
+.answer-3 {
+    background: rgba(255, 244, 205, 0.95);
+    border: 2px solid #e8be51;
+    color: #513c0b;
+}
+
+
+/* ===== ④ 주황 ===== */
+
+.answer-4 {
+    background: rgba(255, 226, 211, 0.95);
+    border: 2px solid #ee9b77;
+    color: #54281a;
+}
+
+
+/* 마우스를 올렸을 때 */
 
 .answer-list button:hover {
-    background-color: #e8f5e9;
+    transform: translateY(-1px);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.13);
 }
 
 
-/* ===== 버튼을 눌렀을 때 ===== */
+/* 눌렀을 때 */
 
 .answer-list button:active {
-    transform: scale(0.99);
+    transform: scale(0.985);
 }
 
 
@@ -142,50 +233,65 @@ hr {
     width: 100%;
     box-sizing: border-box;
 
-    margin-top: 8px;
-    padding: 6px 4px;
-
-    font-size: 21px;
-    line-height: 1.3;
-    font-weight: bold;
+    margin-top: 9px;
+    padding: 7px 5px;
 
     text-align: center;
+
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 800;
+
+    color: #124a88;
 }
 
 
-/* ===== 비밀코드 설명 ===== */
+/* ===== 첫 번째 비밀코드 ===== */
 
 .code-title {
     margin-top: 5px;
 
     font-size: 17px;
     line-height: 1.2;
-    font-weight: 600;
+    font-weight: 700;
+
+    color: #263a59;
 }
 
 
-/* ===== 비밀코드 원형 배지 ===== */
+/* ========================================
+   비밀코드 원형 배지
+======================================== */
 
 .code-badge {
-    width: 55px;
-    height: 55px;
+    width: 58px;
+    height: 58px;
 
-    margin: 5px auto 0 auto;
-
-    border-radius: 50%;
-
-    background-color: #345;
-    color: white;
+    margin: 6px auto 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 32px;
-    line-height: 1;
-    font-weight: bold;
+    border-radius: 50%;
 
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+    background: linear-gradient(
+        145deg,
+        #1769d2,
+        #073b8c
+    );
+
+    border: 4px solid #f3c34c;
+
+    color: white;
+
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 800;
+
+    box-shadow:
+        0 4px 10px rgba(0, 55, 120, 0.28),
+        0 0 0 2px rgba(255, 255, 255, 0.75);
 }
 
 
@@ -195,15 +301,28 @@ hr {
 
 @media screen and (max-width: 600px) {
 
-    /* 전체 화면 */
     body {
-        padding: 6px 13px 10px 13px;
+        padding: 7px 10px;
+
+        background-position: center center;
+    }
+
+
+    /* 반투명 카드 */
+
+    .mission-card {
+        margin: 5px auto;
+
+        padding: 10px 12px 12px;
+
+        border-radius: 17px;
     }
 
 
     /* WORLD SCIENCE CONGRESS */
+
     h1 {
-        margin: 5px 0 5px 0;
+        margin: 2px 0 4px;
 
         font-size: 24px;
         line-height: 1.15;
@@ -211,8 +330,9 @@ hr {
 
 
     /* 장영실 LAB */
+
     h2 {
-        margin: 4px 0 7px 0;
+        margin: 3px 0 6px;
 
         font-size: 22px;
         line-height: 1.15;
@@ -220,15 +340,17 @@ hr {
 
 
     /* 미션 제목 */
+
     h3 {
-        margin: 8px 0 5px 0;
+        margin: 7px 0 5px;
 
         font-size: 20px;
         line-height: 1.25;
     }
 
 
-    /* 설명 / 질문 */
+    /* 설명 */
+
     p {
         margin: 5px 0;
 
@@ -238,41 +360,47 @@ hr {
 
 
     /* 구분선 */
+
     hr {
         margin: 7px 0;
     }
 
 
     /* 보기 전체 */
+
     .answer-list {
-        gap: 5px;
+        gap: 6px;
 
         margin-top: 6px;
     }
 
 
     /* 보기 버튼 */
+
     .answer-list button {
-        padding: 7px 12px;
+        padding: 8px 12px;
 
         font-size: 19px;
         line-height: 1.15;
 
-        border-radius: 9px;
+        border-radius: 10px;
     }
 
 
     /* MISSION CLEAR */
+
     #result {
-        margin-top: 6px;
+        margin-top: 7px;
+
         padding: 5px 3px;
 
         font-size: 21px;
-        line-height: 1.25;
+        line-height: 1.2;
     }
 
 
     /* 첫 번째 비밀코드 */
+
     .code-title {
         margin-top: 4px;
 
@@ -280,13 +408,16 @@ hr {
     }
 
 
-    /* 숫자 1 원형 배지 */
+    /* 숫자 1 배지 */
+
     .code-badge {
-        width: 52px;
-        height: 52px;
+        width: 54px;
+        height: 54px;
 
-        margin-top: 4px;
+        margin-top: 5px;
 
-        font-size: 30px;
+        font-size: 31px;
+
+        border-width: 3px;
     }
 }
